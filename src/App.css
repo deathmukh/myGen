@@ -1,38 +1,148 @@
-.App {
-  text-align: center;
+/* Navigation menu styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #231339;
+    color: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ul {
+    list-style: none;
+    display: flex;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+li {
+    margin-right: 20px;
+    padding: 12px;
+    padding-left: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+a:hover {
+    color: #433f3f;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo-container {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    margin:20px;
+    /* aligns the logo to the left side of the nav */
+}
+
+.logo {
+    height: 100%;
+    width: auto;
+    border-radius: 30px;
+}
+
+
+/* Header styles */
+header {
+    position: relative;
+    height: 100vh;
+    background-image: url('/public/assets/background.jpg');
+    background-size: cover;
+}
+
+.header-content {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+}
+
+.header-content h2 {
+    font-size: 20px;
+}
+
+.header-content button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #250057;
+    color: #fff;
+    font-weight: bold;
+    transition: background-color 0.9s ease;
+}
+
+.header-content button:hover {
+    background-color: #13022c;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Modal styles */
+.modal {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    padding: 15px;
+    background-color: #231339;
+    height: 20vh;
+    position: absolute;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.modal-content p {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.modal-content button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #545392;
+    color: #fff;
+    font-weight: bold;
+    transition: background-color 0.8s ease;
+}
+
+.modal-content button:hover {
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    .banner {
+        height: 50vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content h1{
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content {
+        font-size: 18px;
+    }
 }
